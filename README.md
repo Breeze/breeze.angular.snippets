@@ -3,6 +3,12 @@
 
 A collection of JavaScript code snippets for Visual Studio development of Breeze/AngularJS applications. 
 
+>Snippet listing
+>
+- [angular](#angular-snippets)
+- [breeze](#breeze-snippets)
+- [jasmine](#jasmine-snippets)
+- [general](#general-snippets)
 ## Download
 
 [Download v1.0](https://github.com/Breeze/breeze.angular.snippets.git/archive/master.zip) (.zip)
@@ -110,6 +116,13 @@ You are ready to start programming a controller that is annotated for safe Angul
 # Snippet Listing and examples
 [Incomplete listing. Need to flesh it out.]
 
+- [angular](#angular-snippets)
+- [breeze](#breeze-snippets)
+- [jasmine](#jasmine-snippets)
+- [general](#general-snippets)
+
+
+<a name="angular-snippets"></a>
 ## Angular module snippets
 
 `ngapp` - reference the 'app' module
@@ -204,6 +217,40 @@ You are ready to start programming a controller that is annotated for safe Angul
 
         }]);
 
+<a name="breeze-snippets"></a>
+## Breeze Snippets
+Snippets for Breeze are located in the *breeze* subdirectory.
+
+`bze` - entityAspect with entityState as suggested property
+
+`bzc` - create entity
+
+`bzq` - EntityQuery with suggested callbacks
+
+### Examples
+
+    ^ - cursor when template ends
+
+    //bzce
+    manager.createEntity('type', {^});
+
+    //bze – entityAspect with suggested 'entityState' property
+    foo.entityAspect.entityState^
+
+    //bzq – EntityQuery with callbacks (assumes $q available)
+    EntityQuery.from(from)
+      .using(manager).execute()
+      .then(success).catch(fail);
+
+    function success(data){
+        ^
+    }
+
+    function fail(error){
+        return $q.reject(error); // forward error to caller
+    }
+
+<a name="jasmine-snippets"></a>
 ## Jasmine Snippets
 
 Snippets for Jasmine 2.0 specs are located in the *jasmine* subdirectory. 
@@ -260,6 +307,7 @@ They begin with **it** and **setup and teardown snippets**:
 `xtth` - expect to throw
 
 ###Examples
+
     //desc
     describe('Jasmine code snippet samples', function () {
 
@@ -307,6 +355,46 @@ They begin with **it** and **setup and teardown snippets**:
             }, 10)
         });
     });
+
+<a name="general-snippets"></a>
+## General JS snippets
+
+`fun`  - an anonymous function
+
+`func` - a named function
+
+`iife` - "immediately invoked function execution" boilerplate
+
+`vma`  - ViewModel activate function (often in controllers)
+
+### Examples
+
+    ^ - cursor when template ends
+
+    //fun
+    function(parameters) {
+        ^
+    }
+
+    //func
+    function name(parameters) {
+        ^
+    }
+
+    //iife
+    ; (function(args){
+        'use strict';
+
+    ^
+
+    }(dependencies));
+
+    //vma
+    vm.activate = activate;
+
+    function activate() { 
+        ^;
+    }
 
 # Credit
 

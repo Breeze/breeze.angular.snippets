@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Create entity</Title>
+      <Author>Ward Bell</Author>
+      <Description>create an entity</Description>
+      <HelpUrl>http://www.breezejs.com/sites/all/apidocs/classes/EntityManager.html#method_createEntity
+      </HelpUrl>
+      <Shortcut>bzce</Shortcut>
+    </Header>
+    <Snippet>
+    <Declarations>
+        <Literal Editable="true">
+          <ID>em</ID>
+          <ToolTip>EntityManager instance name</ToolTip>
+          <Default>manager</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>type</ID>
+          <ToolTip>EntityType to create</ToolTip>
+          <Default>'type'</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"><![CDATA[$em$.createEntity($type$, {$end$});
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

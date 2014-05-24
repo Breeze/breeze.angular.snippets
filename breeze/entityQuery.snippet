@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>EntityQuery</Title>
+      <Author>Ward Bell</Author>
+      <Description>insert an EntityQuery</Description>
+      <HelpUrl>http://www.breezejs.com/sites/all/apidocs/classes/EntityQuery.html
+      </HelpUrl>
+      <Shortcut>bzq</Shortcut>
+    </Header>
+    <Snippet>
+    <Declarations>
+        <Literal Editable="true">
+          <ID>from</ID>
+          <ToolTip>The resource name on the server</ToolTip>
+          <Default>'from'</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>em</ID>
+          <ToolTip>EntityManager instance name</ToolTip>
+          <Default>manager</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>then</ID>
+          <ToolTip>'then()' callback</ToolTip>
+          <Default>success</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>catch</ID>
+          <ToolTip>'catch()' callback</ToolTip>
+          <Default>fail</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"><![CDATA[EntityQuery.from($from$)
+          .using($em$).execute()
+          .then($then$).catch($catch$);
+
+      function $then$(data){
+          $end$;
+      }
+
+      function $catch$(error){
+          return $$q.reject(error); // forward error to caller
+      }
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
