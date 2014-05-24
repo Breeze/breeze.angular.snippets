@@ -107,8 +107,207 @@ You are ready to start programming a controller that is annotated for safe Angul
 
 - Select the code snippet from the code snippet inserter and then press TAB or ENTER, or double-click the snippet.
 
-# Snippet Listing
-[not just yet]
+# Snippet Listing and examples
+[Incomplete listing. Need to flesh it out.]
+
+## Angular module snippets
+
+`ngapp` - reference the 'app' module
+
+`ngmc` - controller
+
+`ngmco` - module configuration
+
+`ngmf` - factory
+
+`ngmfi` - filter
+
+`ngmod` - create a module
+
+`ngmp` - provider
+
+`ngmr` - reference to a module you can name
+
+`ngms` - service 
+
+###Examples (filled in)
+
+    // ngmod
+    angular.module('app', [
+            'ngAnimate','ngRoute','ngSanitize',
+            'breeze.angular'
+    ]);
+
+    // ngapp
+    var app = angular.module('app');
+
+    // ngmf
+    app.factory('fooFac',
+        ['$q', '$http', function (
+          $q, $http) {
+            console.log("fooFac defined");
+            var fooFac = {
+                //your code here
+            }
+            return fooFac;
+
+        }]);
+
+    // ngmc
+    app.service('fooSvc',
+        ['$window', 'fooFac', function (
+          $window, fooFac) {
+            this.foo = "have foo";
+
+            console.log("fooSvc defined");
+        }]);
+
+    // ngmp
+    app.provider('fooProv', function () {
+        console.log("fooProProvider defined");
+        var someConfig;
+        this.useSomeConfig = function(value) { someConfig = value; };
+
+        this.$get = ['fooSvc', fooProv];
+
+        function fooProv(fooSvc) {
+            console.log("fooPro defined; using someConfig="+someConfig);
+        }
+
+    });
+
+    // ngmco
+    app.config(['fooProvProvider',
+      function (fooProvProvider) {
+          console.log("fooProProvider configured");
+          fooProvProvider.useSomeConfig("this config");
+
+      }]);
+
+    // ngmfi
+    app.filter('fooFilt',
+        [function () {
+            console.log("fooFilter defined");
+            return function (input, args) {
+
+            }
+
+        }]);
+
+    // ngmc
+    app.controller('GreetingController',
+        ['common', 'datacontext', 'fooProv', 'fooFiltFilter', function (
+          common, datacontext, fooProv, fooFilt) {
+            var vm = this;
+            vm.name = "Eileen";
+            vm.greetings = [{ greeting: 'Hello' }, { greeting: 'Hola' }, { greeting: 'Bonjour' }];
+
+        }]);
+
+## Jasmine Snippets
+
+Snippets for Jasmine 2.0 specs are located in the *jasmine* subdirectory. 
+
+They begin with **it** and **setup and teardown snippets**:
+
+`aft` - after
+
+`bef` - beforeEach
+
+`befi`- beforeEach with ng-mock inject
+
+`befm` - beforeEach with ng-mock module
+
+`desc` - describe
+
+`it` - 'it' spec
+
+`iti` - 'it' with ng-mock inject
+
+`ita` - async 'it' with 'done' function
+
+
+**expectation snippets** are in the *expect* sub-sub-directory 
+
+`xtb` - expect to be
+
+`xtbct` expect to be close to
+
+`xtbd` - expect to be defined
+
+`xtbf` - expect to be falsey
+
+`xtbgt` - expect to be greater than
+
+`xtblt` - expect to be less than
+
+`xtbn` - expect to be null
+
+`xtbt` - expect to be truthy
+
+`xtbu` - expect to be undefined
+
+`xtc` - expect to contain
+
+`xte` - expect to equal
+
+`xthbc` - expect to have been called (spy)
+
+`xthbcw` - expect to have been called with (spy)
+
+`xtm` - expect to match
+
+`xtth` - expect to throw
+
+###Examples
+    //desc
+    describe('Jasmine code snippet samples', function () {
+
+        //bef
+        beforeEach(function () {
+
+        });
+
+        //befm
+        beforeEach(module('app'));
+
+        //befi
+        beforeEach(inject(function (breeze, $q) {
+
+        }));
+
+        //aft
+        afterEach(function () {
+
+        });
+
+        //it
+        it('should expect true not to be false', function () {
+            //xtb
+            expect(true).not.toBe(false);
+
+        });
+
+        //iti
+        it('should be defined', inject(function (breeze) {
+            //xtbd
+            expect(breeze).toBeDefined();
+
+        }));
+
+        //ita - async spec
+        it('should call doit() after a delay', function (done) {
+            var doit = jasmine.createSpy('doit');
+
+            setTimeout(function () {
+                doit();
+                //xthbc
+                expect(doit).toHaveBeenCalled();
+            }, 10)
+
+        });
+
+    });
 
 # Credit
 

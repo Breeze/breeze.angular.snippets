@@ -33,7 +33,10 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[angular.module('$name$',[$dependencies$]);$end$]]></Code>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[angular.module('$name$', [
+        $dependencies$,
+        'breeze.angular'
+      ]);$end$]]></Code>
     </Snippet>
   </CodeSnippet>
 </CodeSnippets>

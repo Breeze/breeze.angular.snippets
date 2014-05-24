@@ -35,16 +35,15 @@
           <Function />
         </Literal>
       </Declarations>
-      <Code Language="javascript"  Delimiter="~"><![CDATA[factory( '~name~', 
-        ['~dependencies~', ~name~]);
-
-    function ~name~( ~dependencies~ ) {
-      var service = {
-        ~code~~end~
+      <Code Language="javascript"  Delimiter="$"><![CDATA[factory('$name$', 
+        ['$dependencies$',  function (
+          $dependencies$ ) {
+      var $name$ = {
+        $code$$end$
       }
-      return service;
-      ///////////////////////////////
-}
+      return $name$;
+
+}]);
 ]]></Code>
     </Snippet>
   </CodeSnippet>

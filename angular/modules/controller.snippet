@@ -35,14 +35,13 @@
           <Function />
         </Literal>
       </Declarations>
-      <Code Language="javascript"  Delimiter="~"><![CDATA[controller( '~name~', 
-        ['~dependencies~', ~name~]);
-
-    function ~name~( ~dependencies~ ) {
+      <Code Language="javascript"  Delimiter="~"><![CDATA[controller('~name~', 
+        ['~dependencies~', function ( 
+          ~dependencies~ ) {
       var vm = this;
       ~code~~end~
-      ///////////////////////////
-}
+
+}]);
 ]]></Code>
     </Snippet>
   </CodeSnippet>

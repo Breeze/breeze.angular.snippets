@@ -44,19 +44,18 @@
           <ID>code</ID>
           <Type />
           <ToolTip />
-          <Default>//your code here</Default>
+          <Default>true; //your code here</Default>
           <Function />
         </Literal>
       </Declarations>
-      <Code Language="javascript"  Delimiter="~"><![CDATA[filter( '~name~', 
-        ['~dependencies~', ~name~]);
-
-    function ~name~(~dependencies~ ) {
-      return function(input, ~args~) {
-        ~code~~end~
+      <Code Language="javascript"  Delimiter="$"><![CDATA[filter('$name$', 
+        ['$dependencies$', function ( 
+          $dependencies$ ) {
+      return function(input, $args$) {
+        return $code$$end$
       }
-      ////////////////////////
-}
+
+}]);
 ]]></Code>
     </Snippet>
   </CodeSnippet>

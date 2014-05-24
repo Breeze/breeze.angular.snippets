@@ -6,32 +6,16 @@
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
       <Keywords />
-      <Title>Module create+config</Title>
-      <Author>Tyson Benson, revised by Ward Bell</Author>
-      <Description>A new angular module with a config function</Description>
+      <Title>Module config</Title>
+      <Author>Ward Bell</Author>
+      <Description>An angular module with a config function</Description>
       <HelpUrl>http://docs.angularjs.org/api/angular.Module</HelpUrl>
-      <Shortcut>ngmodco</Shortcut>
+      <Shortcut>ngmco</Shortcut>
     </Header>
     <Snippet>
       <References />
       <Imports />
       <Declarations>
-        <Literal Editable="true">
-          <ID>name</ID>
-          <ToolTip>
-          </ToolTip>
-          <Default>name</Default>
-          <Function>
-          </Function>
-        </Literal>
-        <Literal Editable="true">
-          <ID>moduleDependencies</ID>
-          <ToolTip>
-          </ToolTip>
-          <Default>moduleDependencies</Default>
-          <Function>
-          </Function>
-        </Literal>
         <Literal Editable="true">
           <ID>configDependencies</ID>
           <ToolTip>
@@ -40,10 +24,19 @@
           <Function>
           </Function>
         </Literal>
+        <Literal Editable="true">
+          <ID>code</ID>
+          <Type />
+          <ToolTip />
+          <Default>//your code here</Default>
+          <Function />
+        </Literal>
       </Declarations>
-      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[var $name$ = angular.module('$name$',[$moduleDependencies$], function($configDependencies$){
-    $end$
-});
+      <Code Language="javascript" Delimiter="$"><![CDATA[config(['$configDependencies$',
+      function ($configDependencies$ ) {
+      $code$$end$
+
+}]);
 ]]></Code>
     </Snippet>
   </CodeSnippet>

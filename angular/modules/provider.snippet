@@ -35,18 +35,17 @@
           <Function />
         </Literal>
       </Declarations>
-      <Code Language="javascript"  Delimiter="~"><![CDATA[provider( '~name~', ~name~Provider );
+      <Code Language="javascript"  Delimiter="~"><![CDATA[provider('~name~', function() {
 
-        function ~name~Provider() {
             //this.someConfig;
 
-            this.$get = ['~dependencies~', ~name~Factory];
+            this.$get = ['~dependencies~', ~name~];
             
-            function ~name~Factory(~dependencies~) {
+            function ~name~(~dependencies~) {
                 ~code~~end~        
             }
-            ///////////////////////////
-    }
+
+});
 ]]></Code>
     </Snippet>
   </CodeSnippet>

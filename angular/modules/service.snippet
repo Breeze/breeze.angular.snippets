@@ -27,7 +27,7 @@
           <Function>
           </Function>
         </Literal>
-         <Literal Editable="true">
+        <Literal Editable="true">
           <ID>code</ID>
           <Type />
           <ToolTip />
@@ -35,13 +35,12 @@
           <Function />
         </Literal>
       </Declarations>
-      <Code Language="javascript"  Delimiter="~"><![CDATA[service( '~name~', 
-        ['~dependencies~', ~name~ );
+      <Code Language="javascript"  Delimiter="$"><![CDATA[service('$name$', 
+        ['$dependencies$', function ( 
+          $dependencies$ ) {
+      $code$$end$
 
-    function ~name~( ~dependencies~ ) {
-      ~code~~end~
-      //////////////////////////
-}
+}]);
 ]]></Code>
     </Snippet>
   </CodeSnippet>
