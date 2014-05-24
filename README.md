@@ -1,5 +1,5 @@
 
-# Code Snippets for Visual Studio development of AngularJS and Breeze apps
+# Code Snippets for development of Angular and Breeze apps in Visual Studio
 
 A collection of JavaScript code snippets for Visual Studio development of Breeze/AngularJS applications. 
 
@@ -34,7 +34,7 @@ For example, the ReSharper Angular Live Template shortcuts  that being "ngm\*" c
 <a name="use-snippets"></a>
 # Use the Snippets
 
-You can insert IntelliSense Code Snippets by **typing the shortcut name of the snippet and pressing Tab** or by using the **Insert Code Snippet Menu**.
+You can insert IntelliSense Code Snippets by **typing the shortcut name of the snippet and pressing TAB** or by using the **Insert Code Snippet Menu**.
 
 ## Snippet Shortcuts
 
@@ -44,7 +44,7 @@ You can insert IntelliSense Code Snippets by **typing the shortcut name of the s
 
 - Press the TAB key once to invoke the code snippet. 
 
-Let's try a controller example. Begin by typing:
+Let's try writing a controller. Begin by typing:
 
 >ngapp&lt;tab>ngmc&lt;tab> 
 
@@ -118,7 +118,7 @@ Tyson appears to have stopped maintaining this repo. That's OK because many snip
 
 Changes include:
 
-* Dropped the HTML snippets because we defer to Web Essentials (restore them from [Tyson's github site](https://github.com/tyson-benson/AngularJS-Snippets/) "Tyson's snippet github repo") if you want them.)
+* Dropped the HTML snippets because we defer to Web Essentials (restore them from [Tyson's github site](https://github.com/tyson-benson/AngularJS-Snippets/ "Tyson's snippet github repo") if you want them.)
 
 * Renamed the Angular and Jasmine shortcuts
 
