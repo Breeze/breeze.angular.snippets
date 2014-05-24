@@ -35,11 +35,12 @@
           <Function />
         </Literal>
       </Declarations>
-      <Code Language="javascript"  Delimiter="~"><![CDATA[controller( '~name~', ~name~ );
+      <Code Language="javascript"  Delimiter="~"><![CDATA[controller( '~name~', 
+        ['~dependencies~', ~name~]);
 
-    ~name~.$inject='~dependencies~';
     function ~name~( ~dependencies~ ) {
-        ~code~~end~
+      var vm = this;
+      ~code~~end~
 }
 ]]></Code>
     </Snippet>

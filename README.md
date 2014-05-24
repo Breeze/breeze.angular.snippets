@@ -25,11 +25,11 @@ A collection of JavaScript code snippets for Visual Studio development of Breeze
 
 Some snippet shortcuts may conflict with angular-oriented shortcuts in other snippets or templates. You'll have to either change these shortcuts to suit yourself or disable the others.
 
-For example, the ReSharper Angular Live Template shortcuts "ngm" and "ngmc" conflict and supersede these. You can disable those two templates as follows:
+For example, the ReSharper Angular Live Template shortcuts "ngm*" conflict with our snippets and override them. You can disable those templates as follows:
 
 1. Open the Resharper Template Explorer from the VS menu
-1. Locate the JavaScript templates
-1. Uncheck the "ngm" and "ngmc" templates
+1. Locate the JavaScript templates with shortcuts that start "ngm"
+1. Uncheck those templates
 
 <a name="use-snippets"></a>
 # Use the Snippets
@@ -50,9 +50,9 @@ Type" ngapp&lt;tab>ngmc&lt;tab>
 
 You are hoping to see this:
 
-    angular.module('app').controller('name', name);
+    angular.module('app').controller('name', 
+        ['$scope', name]);
     
-    name.$inject = '$scope';
     function name($scope) {
         var vm = this;
         //your code here
@@ -66,17 +66,29 @@ Now the cursor is in the `$scope` token. Let's keep that one (we could delete it
 
 Now the cursor is in the final `//your code here` token. 
 
-Press ESC to conclude templating and start coding. It could look like this:
+**Press ESC** to conclude templating. It could look like this:
 
-    angular.module('app').controller('todoController', todoController);
+    angular.module('app').controller('todoController',
+      ['$scope', '$q', 'someService', todoController]);
     
-    todoController.$inject = '$scope, $q, someService';
     function todoController($scope, $q, someService) {
         var vm = this;
-        vm.foo = "who knows what";
+        //your code here
     }
 
-You are ready to go with a controller that is annotated for safe Angular dependency injection.
+**You're almost done** ... but not quite. You have to fix the annotations array because Angular wants an array of strings, not (the more convenient) comma-separated string.
+
+Add the missing quotes in the annotations array to get this:
+
+    angular.module('app').controller('todoController',
+      ['$scope', '$q', 'someService', todoController]);
+    
+    function todoController($scope, $q, someService) {
+        var vm = this;
+        //your code here
+    }
+
+You are ready to start programming a controller that is annotated for safe Angular dependency injection.
 
 ## Insert Code Snippet Menu
 

@@ -35,11 +35,11 @@
           <Function />
         </Literal>
       </Declarations>
-      <Code Language="javascript"  Delimiter="~"><![CDATA[service( '~name~', ~name~ );
+      <Code Language="javascript"  Delimiter="~"><![CDATA[service( '~name~', 
+        ['~dependencies~', ~name~ );
 
-    ~name~.$inject='~dependencies~';
     function ~name~( ~dependencies~ ) {
-        ~code~~end~
+      ~code~~end~
 }
 ]]></Code>
     </Snippet>

@@ -40,9 +40,8 @@
         function ~name~Provider() {
             //this.someConfig;
 
-            this.$get = ~name~Factory;
-
-            ~name~Factory.$inject='~dependencies~';
+            this.$get = ['~dependencies~', ~name~Factory];
+            
             function ~name~Factory(~dependencies~) {
                 ~code~~end~        
             }
