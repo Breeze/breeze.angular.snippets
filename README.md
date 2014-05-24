@@ -303,10 +303,9 @@ They begin with **it** and **setup and teardown snippets**:
                 doit();
                 //xthbc
                 expect(doit).toHaveBeenCalled();
+                done();
             }, 10)
-
         });
-
     });
 
 # Credit
