@@ -1,5 +1,5 @@
 
-# AngularJS Code Snippets for Visual Studio
+# Code Snippets for Visual Studio development of AngularJS and Breeze apps
 
 A collection of JavaScript code snippets for Visual Studio development of Breeze/AngularJS applications. 
 
