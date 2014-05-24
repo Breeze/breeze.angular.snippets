@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>provider when resolve</Title>
+      <Author>Tyson Benson</Author>
+      <Description>Defines a when condition of an AngularJS route with the resolve block.</Description>
+      <HelpUrl>http://docs.angularjs.org/api/ng.$routeProvider</HelpUrl>
+      <Shortcut>ngrwr</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>url</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>/url</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>templateUrl</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>/path/to/template.html</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>controller</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>some</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[when('$url$', {
+    templateUrl: '$templateUrl$',
+    controller: '$controller$Ctrl',
+    resolve: {
+		$end$
+    }
+})]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

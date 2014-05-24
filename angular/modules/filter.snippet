@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>Filter</Title>
+      <Author>Ward Bell</Author>
+      <Description>Define an Angular Module Filter to be attached to a previously defined module.</Description>
+      <HelpUrl>http://docs.angularjs.org/api/angular.Module#filter</HelpUrl>
+      <Shortcut>ngmfi</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>name</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>dependencies</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>dependencies</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>args</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>args</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>code</ID>
+          <Type />
+          <ToolTip />
+          <Default>//your code here</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"  Delimiter="~"><![CDATA[filter( '~name~', ~name~ );
+
+    ~name~.$inject='~dependencies~';
+    function ~name~(~dependencies~ ) {
+        return function(input, ~args~) {
+            ~code~~end~
+        }
+}
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

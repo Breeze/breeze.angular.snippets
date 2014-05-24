@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>before each module</Title>
+      <Author>Tyson Benson, revised by Ward Bell</Author>
+      <Description>beforEach with AngularJS module</Description>
+      <HelpUrl>http://jasmine.github.io/2.0/introduction.html#section-Setup_and_Teardown</HelpUrl>
+      <Shortcut>befm</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>moduleName</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>moduleName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[beforeEach(module('$moduleName$'));
+    $end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

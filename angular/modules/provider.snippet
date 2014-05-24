@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Provider</Title>
+      <Author>Ward Bell</Author>
+      <Description>Define a new Angular Provider.</Description>
+      <HelpUrl>https://docs.angularjs.org/guide/providers#provider-recipe</HelpUrl>
+      <Shortcut>ngmp</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>The name of your provider</ToolTip>
+          <Default>name</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>dependencies</ID>
+          <ToolTip>List of provider dependencies your provider needs angular to inject</ToolTip>
+          <Default>dependencies</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>code</ID>
+          <Type />
+          <ToolTip />
+          <Default>//your code here</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"  Delimiter="~"><![CDATA[provider( '~name~', ~name~Provider );
+
+        function ~name~Provider() {
+            //this.someConfig;
+
+            this.$get = ~name~Factory;
+
+            ~name~Factory.$inject='~dependencies~';
+            function ~name~Factory(~dependencies~) {
+                ~code~~end~        
+            }
+    }
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>toHaveBeenCalled</Title>
+      <Author>Ward</Author>
+      <Description>Expect a spy to have been called</Description>
+      <HelpUrl>http://jasmine.github.io/2.0/introduction.html#section-Spies</HelpUrl>
+      <Shortcut>xthbc</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>actual</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>actual</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>not</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>.not</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[expect($actual$)$not$.toHaveBeenCalled();
+$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

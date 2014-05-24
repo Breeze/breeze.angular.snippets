@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>watch</Title>
+      <Author>Tyson Benson</Author>
+      <Description>Define a $watch for an expression. You can change the expression to be watched.</Description>
+      <HelpUrl>http://docs.angularjs.org/api/ng.$rootScope.Scope#$watch</HelpUrl>
+      <Shortcut>$w</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>watchExpression</ID>
+          <ToolTip>{(function()|string)} – Expression that is evaluated on each $digest cycle. A change in the return value triggers a call to the listener.</ToolTip>
+          <Default>expression</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>scope</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>$scope</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>watch</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>$watch</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[$scope$.$watch$('$watchExpression$', function(newValue, oldValue){
+  $end$
+});]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

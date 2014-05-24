@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>config routes</Title>
+      <Author>Tyson Benson</Author>
+      <Description>A basic template for configuring routing in an AngularJS app</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>ngrc</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>homeUrl</ID>
+          <ToolTip>home</ToolTip>
+          <Default>home</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>homeTemplate</ID>
+          <ToolTip>homeTemplate</ToolTip>
+          <Default>home-template.html</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>homeController</ID>
+          <ToolTip>controller</ToolTip>
+          <Default>home</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>routeProvider</ID>
+          <ToolTip>routeProvider</ToolTip>
+          <Default>$routeProvider</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>locationProvider</ID>
+          <ToolTip>locationProvider</ToolTip>
+          <Default>$locationProvider</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>module</ID>
+          <ToolTip>module</ToolTip>
+          <Default>app</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"><![CDATA[$module$.config(function ($routeProvider$, $locationProvider$) {
+
+        $routeProvider$.
+            when('/$homeUrl$', {
+                templateUrl: '/$homeTemplate$',
+                controller: '$homeController$Ctrl'
+            }).
+            otherwise({ redirectTo: '/$homeUrl$' });
+
+        $locationProvider$.html5Mode(true);
+
+});
+$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>directive with compile</Title>
+      <Author>Tyson Benson</Author>
+      <Description>A directive with a compile function.</Description>
+      <HelpUrl>http://docs.angularjs.org/api/angular.Module#directive</HelpUrl>
+      <Shortcut>ngdc</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>name</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>dependencies</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>dependencies</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>directiveAttrs</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>restrict: 'AC',</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[directive('$name$', function factory($dependencies$) {
+  var directiveDefinitionObject = {
+    $directiveAttrs$
+    compile: function compile(tElement, tAttrs, transclude) {
+      $end$
+      return function (scope, element, attrs) {
+      }
+    }
+  };
+  return directiveDefinitionObject;
+})]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

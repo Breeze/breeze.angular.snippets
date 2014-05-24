@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>Module create+config</Title>
+      <Author>Tyson Benson, revised by Ward Bell</Author>
+      <Description>A new angular module with a config function</Description>
+      <HelpUrl>http://docs.angularjs.org/api/angular.Module</HelpUrl>
+      <Shortcut>ngmodco</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>name</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>moduleDependencies</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>moduleDependencies</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>configDependencies</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>configDependencies</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[var $name$ = angular.module('$name$',[$moduleDependencies$], function($configDependencies$){
+    $end$
+});
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

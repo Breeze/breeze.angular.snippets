@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>directive with linker</Title>
+      <Author>Tyson Benson</Author>
+      <Description>A directive with a linking function only.</Description>
+      <HelpUrl>http://docs.angularjs.org/api/angular.Module#directive</HelpUrl>
+      <Shortcut>ngdl</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>name</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>dependencies</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>dependencies</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[directive('$name$', function($dependencies$) {
+    return function(scope, element, attrs) {
+        $end$
+    };
+})]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

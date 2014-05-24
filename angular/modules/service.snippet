@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Service</Title>
+      <Author>Ward Bell</Author>
+      <Description>Define a new Angular Service.</Description>
+      <HelpUrl>http://docs.angularjs.org/api/angular.Module#service</HelpUrl>
+      <Shortcut>ngms</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>name</ID>
+          <ToolTip>The name of your service</ToolTip>
+          <Default>name</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>dependencies</ID>
+          <ToolTip>List of dependencies your service needs angular to inject</ToolTip>
+          <Default>dependencies</Default>
+          <Function>
+          </Function>
+        </Literal>
+         <Literal Editable="true">
+          <ID>code</ID>
+          <Type />
+          <ToolTip />
+          <Default>//your code here</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="javascript"  Delimiter="~"><![CDATA[service( '~name~', ~name~ );
+
+    ~name~.$inject='~dependencies~';
+    function ~name~( ~dependencies~ ) {
+        ~code~~end~
+}
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

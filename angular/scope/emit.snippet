@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>emit</Title>
+      <Author>Tyson Benson</Author>
+      <Description>Define an $emit for a $scope inside an Angular Controller / Angular Controller Function.</Description>
+      <HelpUrl>http://docs.angularjs.org/api/ng.$rootScope.Scope#$emit</HelpUrl>
+      <Shortcut>$e</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>args</ID>
+          <ToolTip>Optional arguments</ToolTip>
+          <Default>args</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>event</ID>
+          <ToolTip>Event that will flow through all child scopes.</ToolTip>
+          <Default>event</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>scope</ID>
+          <ToolTip>scope</ToolTip>
+          <Default>$scope</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>emit</ID>
+          <ToolTip>emit</ToolTip>
+          <Default>$emit</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[$scope$.$emit$('$event$', $args$);
+$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

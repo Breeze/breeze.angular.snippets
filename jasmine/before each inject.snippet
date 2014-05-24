@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>before each inject</Title>
+      <Author>Tyson Benson, revised by Ward Bell</Author>
+      <Description>beforeEach with Angular's inject</Description>
+      <HelpUrl>http://jasmine.github.io/2.0/introduction.html#section-Setup_and_Teardown</HelpUrl>
+      <Shortcut>befi</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>other</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>optional</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>rootScope</ID>
+          <ToolTip>rootScope</ToolTip>
+          <Default>$rootScope</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[beforeEach(inject(function($rootScope$, $other$){
+      $end$
+}));]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

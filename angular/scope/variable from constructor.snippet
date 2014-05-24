@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>variable from constructor</Title>
+      <Author>Tyson Benson</Author>
+      <Description>Defines a new $scope'd variable inside an AngularJS controller and assigns a value from a contstructor arguments.</Description>
+      <HelpUrl>http://docs.angularjs.org/api/ng.$rootScope.Scope</HelpUrl>
+      <Shortcut>$va</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>variable</ID>
+          <ToolTip>Usually used when you want to set a property on the scope to be an injected dependency</ToolTip>
+          <Default>variable</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>scope</ID>
+          <ToolTip>scope</ToolTip>
+          <Default>$scope</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[$scope$.$variable$ = $variable$;
+$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

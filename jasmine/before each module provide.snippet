@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords />
+      <Title>before each module provide</Title>
+      <Author>Tyson Benson, revised by Ward Bell</Author>
+      <Description>Provides a value to override an existing value during a test spec. Usually used within describe.</Description>
+      <HelpUrl>http://docs.angularjs.org/guide/dev_guide.unit-testing</HelpUrl>
+      <Shortcut>befp</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>id</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>id</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>value</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>value</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="false">
+          <ID>provide</ID>
+          <ToolTip>
+          </ToolTip>
+          <Default>$provide</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="javascript" Kind="" Delimiter="$"><![CDATA[beforeEach(module(function($provide$) {
+    $provide$.value('$id$', $value$);
+}));]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

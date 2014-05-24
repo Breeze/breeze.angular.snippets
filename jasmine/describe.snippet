@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>describe</Title>
+      <Author>Tyson Benson</Author>
+      <Description>Jasmine describe template</Description>
+      <HelpUrl>http://jasmine.github.io/2.0/introduction.html#section-Grouping_Related_Specs_with_&lt;code&gt;describe&lt;/code&gt;</HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>desc</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>spec</ID>
+          <Type />
+          <ToolTip>Name or title for a spec suite</ToolTip>
+          <Default>spec</Default>
+          <Function />
+        </Literal>
+        <Literal Editable="true">
+          <ID>code</ID>
+          <Type />
+          <ToolTip />
+          <Default>//your code here</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="JavaScript" Kind="" Delimiter="$"><![CDATA[describe('$spec$', function() {
+    $code$$end$
+});
+]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
