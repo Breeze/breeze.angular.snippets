@@ -25,7 +25,7 @@ A collection of JavaScript code snippets for Visual Studio development of Breeze
 
 Some snippet shortcuts may conflict with angular-oriented shortcuts in other snippets or templates. You'll have to either change these shortcuts to suit yourself or disable the others.
 
-For example, the ReSharper Angular Live Template shortcuts "ngm*" conflict with our snippets and override them. You can disable those templates as follows:
+For example, the ReSharper Angular Live Template shortcuts  that being "ngm\*" conflict with our snippets and override them. You can disable those templates as follows:
 
 1. Open the Resharper Template Explorer from the VS menu
 1. Locate the JavaScript templates with shortcuts that start "ngm"
@@ -44,9 +44,9 @@ You can insert IntelliSense Code Snippets by **typing the shortcut name of the s
 
 - Press the TAB key once to invoke the code snippet. 
 
-For example:
+Let's try a controller example. Begin by typing:
 
-Type" ngapp&lt;tab>ngmc&lt;tab> 
+>ngapp&lt;tab>ngmc&lt;tab> 
 
 You are hoping to see this:
 
@@ -66,17 +66,20 @@ Now the cursor is in the `$scope` token. Let's keep that one (we could delete it
 
 Now the cursor is in the final `//your code here` token. 
 
-**Press ESC** to conclude templating. It could look like this:
+**Press ESC twice** to conclude templating. It should look like this:
 
     angular.module('app').controller('todoController',
-      ['$scope', '$q', 'someService', todoController]);
+      ['$scope, $q, someService', todoController]);
     
     function todoController($scope, $q, someService) {
         var vm = this;
         //your code here
     }
 
-**You're almost done** ... but not quite. You have to fix the annotations array because Angular wants an array of strings, not (the more convenient) comma-separated string.
+**You're almost done** ... but not quite. You have to fix the annotations array because Angular wants an array of strings, not (the more convenient) comma-separated strings.
+
+    ['$scope, $q, someService', todoController]);     // WRONG
+    ['$scope', '$q', 'someService', todoController]); // RIGHT
 
 Add the missing quotes in the annotations array to get this:
 
@@ -96,11 +99,11 @@ You are ready to start programming a controller that is annotated for safe Angul
 
 - Launch the Insert Code Snippet menu in one of three ways:
 
- 1. Press CTRL+K, CTRL+X.
+	1. Press CTRL+K, CTRL+X.
  
- 2. On the Edit menu, point to IntelliSense, and then click Insert Snippet.
+	1. On the Edit menu, point to IntelliSense, and then click Insert Snippet.
  
- 3. Right-click the mouse and then select the Insert Snippet command on the shortcut menu.
+	1. Right-click the mouse and then select the Insert Snippet command on the shortcut menu.
 
 - Select the code snippet from the code snippet inserter and then press TAB or ENTER, or double-click the snippet.
 
