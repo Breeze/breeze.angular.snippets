@@ -11,11 +11,11 @@ A collection of JavaScript code snippets for Visual Studio development of Breeze
 - [general](#general-snippets)
 ## Download
 
-[Download v1.0](https://github.com/Breeze/breeze.angular.snippets.git/archive/master.zip) (.zip)
+[Download v1.0](https://github.com/Breeze/breeze.angular.snippets/archive/master.zip) (.zip)
 
 ## Installation
 
-1. [Download the **breeze.angular.snippets** folder](https://github.com/Breeze/breeze.angular.snippets.git/archive/master.zip) and all of its contents.
+1. [Download the **breeze.angular.snippets** folder](https://github.com/Breeze/breeze.angular.snippets/archive/master.zip) and all of its contents.
 1. Extract the zip and drop the **breeze.angular.snippets** folder into the **Documents** > **Visual Studio 2013** > **Code Snippets** folder on your computer.
 1. Delete the *.github* files (optional)
 1. In Visual Studio, navigate to **Tools** > **Code Snippet Manager**.
